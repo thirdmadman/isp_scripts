@@ -1,5 +1,5 @@
 async function findFreeIp(netId) {
-  let url = "https://ds.smartape.net/api/dci/v3/ipmgr/ip?orderby=name%20asc&limit=0,34&where=NOT%20domain%20CP%20%27%25extended.%25%27+AND+(ipnet%20EQ%20"+netId+")";
+  let url = "https://ds.smartape.net/api/dci/v3/ipmgr/ip?orderby=name%20asc&limit=0,512&where=NOT%20domain%20CP%20%27%25extended.%25%27+AND+(ipnet%20EQ%20"+netId+")";
   let response = await fetch(url, {
       headers: {
           "isp-box-instance": "true",
