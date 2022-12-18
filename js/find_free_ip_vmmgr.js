@@ -1,5 +1,5 @@
 async function findFreeIp(netId) {
-  let url = 'https://vps.smartape.net/vm/v3/ip?orderby=ip_addr%20asc&limit=0,300&where=((network%20EQ%20' + netId + '))';
+  let url = 'https://vps.smartape.net/vm/v3/ip?orderby=ip_addr%20asc&limit=0,512&where=((network%20EQ%20' + netId + '))';
   let response = await fetch(url, {
     headers: {
       'isp-box-instance': 'true',
